@@ -1,0 +1,50 @@
+---
+import '../styles.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Audit trails made simple for TypeScript applications." />
+    <title>Tracekit</title>
+  </head>
+  <body>
+    <nav>
+      <strong><span>T</span> Tracekit</strong>
+      <div>
+        <a href="#installation">Installation</a>
+        <a href="#api">API</a>
+        <a href="https://www.npmjs.com/">npm</a>
+      </div>
+    </nav>
+    <main>
+      <p class="eyebrow">TypeScript audit logging</p>
+      <h1>Know exactly<br /><em>what changed.</em></h1>
+      <p class="lede">Record actors, actions, and before-and-after snapshots with a compact, database-first API.</p>
+      <pre><code>await tracekit.record(&#123;
+  actorId: user.id,
+  entityType: 'invoice',
+  entityId: invoice.id,
+  action: 'update',
+  before,
+  after
+&#125;)</code></pre>
+      <section id="installation">
+        <p class="eyebrow">Install</p>
+        <h2>One package. Your Postgres.</h2>
+        <code class="command">npm install @tracekit/core</code>
+      </section>
+      <section id="api">
+        <p class="eyebrow">Queries</p>
+        <h2>History without archaeology.</h2>
+        <div class="grid">
+          <article>events.recent()</article>
+          <article>events.forEntity()</article>
+          <article>events.byActor()</article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

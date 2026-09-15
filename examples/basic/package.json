@@ -1,0 +1,12 @@
+{
+  "name": "@tracekit/example-basic",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@tracekit/core": "file:../../packages/tracekit",
+    "@neondatabase/serverless": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}

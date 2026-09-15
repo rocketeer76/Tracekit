@@ -1,0 +1,33 @@
+{
+  "name": "tracekit-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "examples/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm run build --workspace @tracekit/core && npm run build --workspace @tracekit/docs",
+    "build:docs": "npm run build --workspace @tracekit/docs",
+    "dev": "npm run dev --workspace @tracekit/core",
+    "dev:docs": "npm run dev --workspace @tracekit/docs",
+    "test": "npm run test --workspace @tracekit/core",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run format:check && npm run lint && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}

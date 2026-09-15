@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+:root {
+  font-family: Inter, ui-sans-serif, system-ui;
+  background: #080b0c;
+  color: #eef5ed;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 75% 12%, #9cff6f1c, transparent 28rem), #080b0c;
+}
+nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.2rem, 6vw, 6rem);
+  border-bottom: 1px solid #ffffff12;
+}
+nav strong {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+nav strong span {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.55rem;
+  background: #a7ff77;
+  color: #071006;
+  font-weight: 900;
+}
+nav div {
+  display: flex;
+  gap: 1.5rem;
+}
+a {
+  color: #9aa79a;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+main {
+  width: min(75rem, calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+.eyebrow {
+  color: #a7ff77;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+h1 {
+  font-size: clamp(3.4rem, 9vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  margin: 0.8rem 0 2rem;
+  max-width: 11ch;
+}
+h1 em {
+  color: #a7ff77;
+  font-style: normal;
+}
+.lede {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #9aa79a;
+  max-width: 38rem;
+}
+pre {
+  margin: 4rem 0 8rem;
+  padding: 2rem;
+  overflow: auto;
+  border: 1px solid #ffffff14;
+  border-radius: 1rem;
+  background: #0d1211;
+  box-shadow: 0 2rem 6rem #000;
+}
+code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  color: #c8fbb0;
+  line-height: 1.7;
+}
+section {
+  padding: 5rem 0;
+  border-top: 1px solid #ffffff12;
+}
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.05em;
+}
+.command {
+  display: block;
+  padding: 1rem 1.2rem;
+  border-radius: 0.7rem;
+  background: #121814;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.grid article {
+  padding: 1.5rem;
+  border: 1px solid #ffffff12;
+  border-radius: 0.8rem;
+  color: #c8fbb0;
+  background: #0d1211;
+}
+@media (max-width: 650px) {
+  nav div {
+    display: none;
+  }
+  main {
+    padding-top: 4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

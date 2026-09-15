@@ -1,4 +1,4 @@
-[![Tracekit](apps/public/media/social/og-card.png)](https://tracekitapp.netlify.app/)
+[![Tracekit](apps/docs/public/media/social/og-card.png)](https://tracekitapp.netlify.app/)
 
 # Tracekit
 

@@ -1,5 +1,8 @@
 ---
 import '../styles.css';
+const title = 'Tracekit';
+const description = 'Audit trails made simple for TypeScript applications.';
+const socialImage = Astro.site ? new URL('/media/social/og-card.png', Astro.site).href : '/media/social/og-card.png';
 ---
 
 <!doctype html>
@@ -7,8 +10,19 @@ import '../styles.css';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Audit trails made simple for TypeScript applications." />
-    <title>Tracekit</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Tracekit product preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content="Tracekit product preview" />
+    <title>{title}</title>
   </head>
   <body>
     <nav>
